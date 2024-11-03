@@ -1,5 +1,42 @@
 .nav-bar {
   display: flex;
-  background-color: #ccc;
-  padding-left: 20px;
+  flex-direction: column; /* Makes the NavBar vertical */
+  align-items: flex-start; /* Aligns items to the left */
+  background-color: #f9f9f9; /* Background color for the sidebar */
+  position: fixed; /* Fixes the sidebar in place on the left */
+  left: 2%; /* Aligns the sidebar to the left */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%); /* Shift up by half its height */
+  
+  border-radius: 15px; /* Rounded borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 10px; /* Add some padding inside the navbar */
+}
+
+.nav-bar__link {
+  background-color: #ffffff; /* Background color for the option boxes */
+  border: 1px solid #e0e0e0; /* Border for each option */
+  border-radius: 10px; /* Rounded corners for option boxes */
+  padding: 15px; /* Padding inside each box */
+  margin: 10px 0; /* Margin between boxes */
+  width: 85%; /* Width of the option box relative to the navbar */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color */
+}
+
+.nav-icon {
+  width: 20px; /* Set the desired width for the icons */
+  height: 20px; /* Set the desired height for the icons */
+  margin-right: 10px; /* Space between the icon and the text */
+  vertical-align: middle; /* Aligns the icon with the text */
+}
+
+
+.nav-bar__link--active {
+  background-color: #e0e0e0; /* Background for the active link */
+}
+
+.nav-bar__link:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
 }
