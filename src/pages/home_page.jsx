@@ -3,8 +3,17 @@ import React from 'react'
 export const HomePage = () => {
   return (
     <>
-      <p>¡Te damos la bienvenida a la Interfaz energética!</p>
-      <p>En esta página encontraras una 💡 ampolleta que podrás encender y apagar con un botón</p>
+      <div className="login-container">
+      <h1>Practica DI</h1>
+      <p>Universidad Tecnico Federico Santa Maria</p>
+      <div className="login-form">
+        <label htmlFor="username">Usuario</label>
+        <input type="text" id="username" placeholder="Value" />
+        <label htmlFor="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Value" />
+        <button type="submit">Submit</button>
+      </div>
+    </div>
     </>
   )
 }
