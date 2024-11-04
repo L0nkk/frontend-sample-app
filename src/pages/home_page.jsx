@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 export const HomePage = () => {
   const navigate = useNavigate()
 
@@ -10,6 +11,7 @@ export const HomePage = () => {
 
   return (
     <>
+      
       <div className="login-container">
         <h1>Practica DI</h1>
         <p>Universidad Tecnico Federico Santa Maria</p>
