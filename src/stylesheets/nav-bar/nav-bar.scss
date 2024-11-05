@@ -4,13 +4,14 @@
   align-items: flex-start; /* Aligns items to the left */
   background-color: #f9f9f9; /* Background color for the sidebar */
   position: fixed; /* Fixes the sidebar in place on the left */
-  left: 2%; /* Aligns the sidebar to the left */
-  top: 50%; /* Centers vertically */
+  left: 4%; /* Aligns the sidebar to the left */
+  top: 43%; /* Centers vertically */
   transform: translateY(-50%); /* Shift up by half its height */
   
   border-radius: 15px; /* Rounded borders */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
   padding: 10px; /* Add some padding inside the navbar */
+  min-height: 450px;
 }
 
 .nav-bar__link {
