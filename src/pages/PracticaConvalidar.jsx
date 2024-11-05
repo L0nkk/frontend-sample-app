@@ -21,16 +21,16 @@ export const PracticaConvalidar = () => {
         <div className="base">
           <p>Convalidar Practica</p>
           <div className="button-container">
-            <div className="button-box" onClick={() => navigate('/convalidar_placeholder')} style={{ cursor: 'pointer' }}>
+            <div className="button-box" onClick={() => navigate('/practica_inscribir')} style={{ cursor: 'pointer' }}>
               <p>Trabajo Profesional</p>
             </div>
-            <div className="button-box" onClick={() => navigate('/convalidar_placeholder')} style={{ cursor: 'pointer' }}>
+            <div className="button-box" onClick={() => navigate('/practica_inscribir')} style={{ cursor: 'pointer' }}>
               <p>Practica Investigativa</p>
             </div>
-            <div className="button-box" onClick={() => navigate('/convalidar_placeholder')} style={{ cursor: 'pointer' }}>
+            <div className="button-box" onClick={() => navigate('/practica_inscribir')} style={{ cursor: 'pointer' }}>
               <p>Trabajo Social</p>
             </div>
-            <div className="button-box" onClick={() => navigate('/convalidar_placeholder')} style={{ cursor: 'pointer' }}>
+            <div className="button-box" onClick={() => navigate('/practica_inscribir')} style={{ cursor: 'pointer' }}>
               <p>Emprendimiento </p>
             </div>
           </div>

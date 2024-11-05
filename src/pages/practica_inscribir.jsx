@@ -8,7 +8,7 @@ export const PracticaInscribir = () => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    navigate('/inicio') // Change '/new-route' to the desired route path
+    navigate('/practica_registrada') // Change '/new-route' to the desired route path
   }
   const handleTitleClick = () => {
     navigate('/inicio') // Change '/new-route' to the desired route path
@@ -24,64 +24,57 @@ export const PracticaInscribir = () => {
           Practica DI
         </h1>
         <p>Universidad Tecnico Federico Santa Maria</p>
+        
         <div className="login-form">
-
-            
           <h3>Practica Profesional</h3>
+            
+          
           <div class="form-item">
-          <label htmlFor="tiempo">Tiempo</label>
-          <select id="tiempo">
-            <option value="two-months">2 meses</option>
-            <option value="three-months">3 meses</option>
-          </select>
-                
-            </div>
-          <div class="form-item">
+            <label htmlFor="tiempo">Tiempo</label>
+            <select id="tiempo">
+              <option value="two-months">2 meses</option>
+              <option value="three-months">3 meses</option>
+            </select>
+          </div>
 
-          <label htmlFor="empresa">Empresa</label>
-          <input type="text" id="empresa" placeholder="Value" />
+          <div class="form-item">
+            <label htmlFor="empresa">Empresa</label>
+            <input type="text" id="empresa" placeholder="Empresa SPA" />
           </div>
           
         
           <div class="form-item">
-
-          <label htmlFor="supervisor">Supervisor</label>
-          <input type="text" id="supervisor" placeholder="Value" />
+            <label htmlFor="supervisor">Supervisor</label>
+            <input type="text" id="supervisor" placeholder="Juan Supervisa" />
           </div>
           
 
           <div class="form-item">
-
-          <label htmlFor="supervisor-email">Correo supervisor</label>
-          <input type="email" id="supervisor-email" placeholder="Value" />
+            <label htmlFor="supervisor-email">Correo supervisor</label>
+            <input type="email" id="supervisor-email" placeholder="juan.supervisa@empresa.cl" />
           </div>
           
 
           <div class="form-item">
-
-          <label htmlFor="fecha-inicio">Fecha Inicio</label>
-          <input type="date" id="fecha-inicio" placeholder="Value" />
+            <label htmlFor="fecha-inicio">Fecha Inicio</label>
+            <input type="date" id="fecha-inicio"  />
           </div>
           
 
           <div class="form-item">
-
-          <label htmlFor="fecha-termino">Fecha Termino</label>
-          <input type="date" id="fecha-termino" placeholder="Value" />
-            
+            <label htmlFor="fecha-termino">Fecha Termino</label>
+            <input type="date" id="fecha-termino"  />
           </div>
           
           <div class="form-item">
-
-          <label htmlFor="rut-empresa">RUT Empresa</label>
-          <input type="text" id="rut-empresa" placeholder="Value" />
+            <label htmlFor="rut-empresa">RUT Empresa</label>
+            <input type="text" id="rut-empresa" placeholder="77.777.777-7" />
           </div>
           
 
           <div class="form-item">
-
-          <label htmlFor="direccion-empresa">Direccion Empresa</label>
-          <input type="text" id="direccion-empresa" placeholder="Value" />
+            <label htmlFor="direccion-empresa">Direccion Empresa</label>
+            <input type="text" id="direccion-empresa" placeholder="Avenida calle 123 oficina 4" />
           </div>
           
 

@@ -274,41 +274,50 @@ $avatar-border-radius: 50%;
   .login-form {
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: stretch;
+    flex-wrap: wrap;
     padding: 2rem;
+    padding-left: 6rem;
     background-color: $form-background-color;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 67%;
-
+    max-height: 65vh;
+    max-width: 60vw;
+    
     .form-item{
       display: flex;
       flex-direction: row;
-      align-items: right;
-      width: 20%;
+      align-items: stretch;
+      width: 35%;
+      height: 9vh;
+      box-sizing: border-box;
     }
 
 
 
     label {
-      align-self: flex-start;
       margin-bottom: 0.5rem;
       margin-right: 5rem;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
+      box-sizing: border-box;
       color: $secondary-color;
+      width: 100%;
     }
 
-    input {
+    input, select {
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
+      box-sizing: border-box;
       border: 1px solid $input-border-color;
       border-radius: 4px;
       font-size: 1rem;
     }
 
     button {
-      width: 20%;
+      width: 19.99%;
+      height: 10%;
       padding: 0.8rem;
       background-color: $primary-color;
       color: #fff;
@@ -317,6 +326,9 @@ $avatar-border-radius: 50%;
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      position:absolute;
+      left: 52.5%;
+      top: 71.5%;
 
       &:hover {
         background-color: $secondary-color;
@@ -504,7 +516,7 @@ $avatar-border-radius: 50%;
 }
 
 
-.login-container {
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -525,49 +537,6 @@ $avatar-border-radius: 50%;
     color: $text-color;
   }
 
-  // Estilos del formulario
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: $form-background-color;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-
-    label {
-      align-self: flex-start;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: $secondary-color;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid $input-border-color;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 0.8rem;
-      background-color: $primary-color;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: $secondary-color;
-      }
-    }
-  }
 
   // Estilos del contenedor base con tamaño fijo
   .base {
@@ -578,67 +547,17 @@ $avatar-border-radius: 50%;
     background-color: $form-background-color;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px; // Tamaño fijo
-    height: 400px; // Tamaño fijo
+    width: 64%; // Tamaño fijo
+    height: 65vh; // Tamaño fijo
     overflow-y: auto;
 
-    .summary-container {
-      display: flex;
-      justify-content: space-between; /* Space between Notas and Observaciones */
-      margin-top: 20px; /* Space above the summary */
-    }
-    
-    .notas,
-    .observaciones {
-      background-color: #f9f9f9; /* Background color for the boxes */
-      border: 1px solid #ddd; /* Border color */
-      border-radius: 8px; /* Rounded corners */
-      padding: 40px; /* Padding inside the box */
-      width: 45%; /* Fixed width for the boxes */
-      margin: 50px 10px;
-    }
-    
-    textarea {
-      width: 100%; /* Full width of the text area */
-      resize: none; /* Disable resizing */
-    }
-    
-    .toggle-view-button {
-      margin-top: 20px; /* Space above the button */
-      padding: 10px 15px; /* Padding for the button */
-      background-color: #007bff; /* Button color */
-      color: white; /* Button text color */
-      border: none; /* Remove border */
-      border-radius: 5px; /* Rounded corners */
-      cursor: pointer; /* Pointer cursor on hover */
-    }
-    
-    .toggle-view-button:hover {
-      background-color: #0056b3; /* Darker color on hover */
-    }
-    
-    .alternative-view {
-      display: flex;
-      justify-content: space-between; /* Space between the sections */
-      margin-top: 20px; /* Space above the alternative view */
-    }
-    
-    .estado,
-    .tiempo,
-    .bitacora {
-      background-color: #f9f9f9; /* Background color for the boxes */
-      border: 1px solid #ddd; /* Border color */
-      border-radius: 8px; /* Rounded corners */
-      padding: 15px; /* Padding inside the box */
-      width: 30%; /* Fixed width for alternative view boxes */
-      margin: 50px 10px;
-    }
     
 
     .button-container {
       display: flex;
       justify-content: space-around; /* Distributes boxes evenly */
       margin-top: 20px; /* Space between the welcome message and buttons */
+      height: 70%;
     }
     
     .button-box {
@@ -647,7 +566,7 @@ $avatar-border-radius: 50%;
       border-radius: 8px; /* Rounded corners */
       padding: 15px; /* Padding inside the box */
       text-align: center; /* Center the text */
-      width: 150px; /* Fixed width for the boxes */
+      width: 15%; /* Fixed width for the boxes */
       transition: background-color 0.3s; /* Transition effect */
       margin: 0 20px;
     }
@@ -656,91 +575,88 @@ $avatar-border-radius: 50%;
       background-color: #e0e0e0; /* Change color on hover */
     }
     
-    .status {
-      margin-top: 10px; /* Space above the status */
-      font-size: 0.9rem; /* Smaller font size for status */
-      display: flex; /* Flexbox for alignment */
-      justify-content: space-between; /* Space between label and status */
-    }
-    
-    .status-label {
-      color: #666; /* Color for the status label */
-    }
-    
-    .status-completo {
-      color: green; /* Color for the 'Completo' status */
-      font-weight: bold; /* Bold text for emphasis */
-    }
-    
-    .status-incompleto {
-      color: red; /* Color for 'Incompleto' status */
-      font-weight: bold; /* Bold text for emphasis */
-    }
-
     h3, h4 {
       color: $primary-color;
       margin-bottom: 1rem;
     }
   
-    .chart-container {
-      width: 100%;
-      max-width: 300px;
+    
+  }
+}
+
+
+.inscripcion-completa-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $background-color;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: $text-color;
+  }
+
+
+  // Estilos del contenedor base con tamaño fijo
+  .base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: $form-background-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 64%; // Tamaño fijo
+    height: 65vh; // Tamaño fijo
+    overflow-y: auto;
+
+    h2{
+      position: relative;
+      top: 20%;
+      font-size:xx-large;
     }
+    
 
-    .empresa-list {
-      list-style: none;
-      padding: 0;
-      margin: 0; // Eliminar márgenes adicionales
-      width: 100%;
-      overflow: auto;
-
-      .empresa-item {
-        padding: 0.8rem;
-        border-bottom: 1px solid $input-border-color;
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        p {
-          margin: 0.2rem 0;
-        }
-
-        strong {
-          color: $primary-color;
-        }
-      }
-    }
-    // Estilos de la información de perfil
-    .profile {
+    .button-container {
+      position: relative;
+      top: 40%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      &__avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-      }
-
-      &__name {
-        font-size: 1.5rem;
-        color: $primary-color;
-        margin-bottom: 0.5rem;
-      }
-
-      &__email {
-        font-size: 1rem;
-        color: $secondary-color;
-        margin-bottom: 1rem;
-      }
-
-      &__bio {
-        font-size: 0.9rem;
-        color: $text-color;
-      }
+      justify-content: space-around; /* Distributes boxes evenly */
+      margin-top: 20px; /* Space between the welcome message and buttons */
+      width: 45%;
+      height: 25%;
     }
+    
+    .button-box {
+      background-color: #f9f9f9; /* Background color for the box */
+      border: 1px solid #ddd; /* Border color */
+      border-radius: 8px; /* Rounded corners */
+      padding: 15px; /* Padding inside the box */
+      text-align: center; /* Center the text */
+      width: 100%; /* Fixed width for the boxes */
+      transition: background-color 0.3s; /* Transition effect */
+      margin: 0 20px;
+    }
+    
+    .button-box:hover {
+      background-color: #e0e0e0; /* Change color on hover */
+    }
+    
+    h3, h4 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  
+    
   }
 }

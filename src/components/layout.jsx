@@ -13,6 +13,7 @@ import Informacion from '../pages/informacion';
 import NavBar from '../components/nav_bar';
 import PracticaConvalidar from '../pages/PracticaConvalidar';
 import PracticaInscribir from '../pages/practica_inscribir';
+import PracticaRegistarda from '../pages/practica_registrada';
 
 const Layout = () => {
   return (
@@ -31,6 +32,7 @@ const Layout = () => {
             <Route path='/informacion' element={<Informacion />} />
             <Route path='/practica_convalidar' element={ <PracticaConvalidar/>}/> {/* New route */}
             <Route path='/practica_inscribir' element={ <PracticaInscribir/>}/> {/* New route */}
+            <Route path='/practica_registrada' element={ <PracticaRegistarda />}/>
             <Route path='*' element={<h2>Page Not Found</h2>} />
           </Routes>
         </div>
