@@ -38,8 +38,9 @@ $avatar-border-radius: 50%;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 64%; // Tamaño fijo
-      height: 64vh; // Tamaño fijo
-  
+      height: 60vh; // Tamaño fijo
+      left: 100px;
+
       .summary-container {
         display: flex;
         justify-content: space-between; /* Space between Notas and Observaciones */
@@ -47,6 +48,7 @@ $avatar-border-radius: 50%;
         margin-top: 20px; /* Space above the summary */
         width: 96.5%;
         max-height: fit-content;
+        overflow: auto;
       }
   
       .notas,
@@ -57,6 +59,7 @@ $avatar-border-radius: 50%;
         padding: 10px 20px; /* Padding inside the box */
         width: 45%; /* Fixed width for the boxes */
         margin: 50px 10px;
+        overflow: auto;
       }
   
       .notas-lista {
