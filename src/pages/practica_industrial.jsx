@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import NavBar from "../components/nav_bar";
+import Bitacora from "../components/Bitacora";
 
 export const HomePage = () => {
   const navigate = useNavigate();
   const [showAlternativeView, setShowAlternativeView] = useState(true);
 
   const handleTitleClick = () => {
-    navigate("/inicio"); // Navigate to the "/inicio" route when "Practica DI" is clicked
+    navigate("/inicio"); // Navega a la ruta "/inicio" cuando se hace clic en "Practica DI"
   };
 
   const toggleView = () => {
@@ -27,6 +28,29 @@ export const HomePage = () => {
     { name: "Comunicacion Efectiva", calificacionn: 5 },
   ];
 
+  const estado = {
+    estado: "En Revision",
+    progreso: 320,
+    empresa: "Palta inc.",
+    supervisor: "Superv Gonnzales",
+  };
+
+  const tiempos = {
+    modo: "2 meses",
+    inicio: "03/01/2025",
+    termino: "08/03/2025",
+  };
+
+  // Convertimos bitacoras a un diccionario
+  const bitacoras = {
+    "10/01/2025": "Me fue muy bien",
+    "17/01/2025": "Soy una bitacora 2, limpie bases de datos",
+    "24/01/2025": "Me encanta trabajar aca, migre una base de excel a DynamoDB",
+    "31/01/2025":
+      "Soy una bitacora bastante larga. Tuve que hacer un analisis de requerimientos de una empresa que vende paltas, ellos querian microservicios pero no les convenia debido a su bajo presupuesto y a la falta de profesionales informaticos. Me gusta la palta",
+    "07/02/2025": "Soy una bitacora corta que deberia causar overflow. MUCHO sql",
+  };
+
   return (
     <>
       <NavBar />
@@ -34,7 +58,7 @@ export const HomePage = () => {
         <h1 onClick={handleTitleClick} style={{ cursor: "pointer" }}>
           Practica DI
         </h1>
-        <p>Universidad Tecnico Federico Santa Maria</p>
+        <p>Universidad Tecnica Federico Santa Maria</p>
         <div className="base" style={{ position: "relative" }}>
           <div className="toggle-view-container">
             <button
@@ -53,7 +77,7 @@ export const HomePage = () => {
             </button>
           </div>
 
-          {/* Conditionally render Notas and Observaciones based on the alternative view state */}
+          {/* Renderiza condicionalmente Notas y Observaciones basado en el estado de vista alternativa */}
           {!showAlternativeView && (
             <div className="summary-container">
               <div className="notas">
@@ -61,7 +85,7 @@ export const HomePage = () => {
                 <ul className="notas-lista">
                   {notas.map((item, index) => {
                     return (
-                      <li className="notas-item">
+                      <li key={index} className="notas-item">
                         {item.name}
                         <span
                           className="notas-item-nota"
@@ -84,20 +108,48 @@ export const HomePage = () => {
             </div>
           )}
 
-          {/* Alternative View */}
+          {/* Vista Alternativa */}
           {showAlternativeView && (
             <div className="alternative-view">
-              <div className="estado">
-                <h3>Estado</h3>
-                <p>Detalles sobre el estado del estudiante.</p>
+              <div className="left-column">
+                <div className="estado">
+                  <h3>
+                    <strong>Estado:</strong> {estado.estado}
+                  </h3>
+                  <h3>
+                    <strong>Progreso:</strong> {estado.progreso} hrs.
+                  </h3>
+                  <h3>
+                    <strong>Empresa:</strong> {estado.empresa}
+                  </h3>
+                  <h3>
+                    <strong>Supervisor:</strong> {estado.supervisor}
+                  </h3>
+                </div>
+                <div className="tiempo">
+                  <h2>Tiempos: </h2>
+                  <h3>
+                    <strong>Modo: </strong>
+                    {tiempos.modo}
+                  </h3>
+                  <h3>
+                    <strong>Inicio: </strong>
+                    {tiempos.inicio}
+                  </h3>
+                  <h3>
+                    <strong>Termino: </strong>
+                    {tiempos.termino}
+                  </h3>
+                </div>
               </div>
-              <div className="tiempo">
-                <h3>Tiempo</h3>
-                <p>Información sobre el tiempo dedicado.</p>
-              </div>
+
               <div className="bitacora">
-                <h3>Bitácora</h3>
-                <p>Notas de seguimiento y comentarios.</p>
+                <h2>Bitácora</h2>
+                <ul>
+                  {Object.entries(bitacoras).map(([date, content]) => (
+                    <Bitacora key={date} date={date} content={content} />
+                  ))}
+                </ul>
               </div>
             </div>
           )}

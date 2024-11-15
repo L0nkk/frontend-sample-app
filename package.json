@@ -17,6 +17,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "chart.js": "^4.4.6",
+    "frontend-sample-app": "file:",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
@@ -46,7 +47,7 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "webpack": "^5.52.0",
-    "webpack-cli": "^4.8.0",
+    "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.2.0"
   }
 }
