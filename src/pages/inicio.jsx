@@ -1,18 +1,22 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import NavBar from '../components/nav_bar';
 
 export const HomePage = () => {
+  const {completed} = useParams()
+
+
   const navigate = useNavigate();
 
   const handleTitleClick = () => {
-    navigate('/inicio'); // Navegar a la ruta "/inicio" al hacer clic en "Practica DI"
+    navigate(`/inicio/${completed}`); // Navegar a la ruta "/inicio" al hacer clic en "Practica DI"
   };
+
 
   return (
     <>
-      <NavBar />
+      <NavBar completed={completed}/>
       <div className="login-container">
         <h1 onClick={handleTitleClick} style={{ cursor: 'pointer' }}>
           Practica DI

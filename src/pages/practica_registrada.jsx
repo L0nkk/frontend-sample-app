@@ -25,7 +25,7 @@ export const PracticaRegistarda = () => {
       <div className="base">
         <h2>Practica Inscrita con Exito</h2>
         <div className="button-container">
-          <div className="button-box" onClick={() => navigate('/inicio')} style={{ cursor: 'pointer' }}>
+          <div className="button-box" onClick={() => navigate('/inicio/1')} style={{ cursor: 'pointer' }}>
             <p>Volver a inicio</p>
           </div>
         </div>

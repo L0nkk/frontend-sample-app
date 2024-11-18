@@ -6,7 +6,7 @@ export const HomePage = () => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    navigate('/inicio') // Change '/new-route' to the desired route path
+    navigate('/inicio/0') // Change '/new-route' to the desired route path
   }
 
   return (

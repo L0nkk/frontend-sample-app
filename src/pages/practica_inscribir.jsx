@@ -11,7 +11,7 @@ export const PracticaInscribir = () => {
     navigate('/practica_registrada') // Change '/new-route' to the desired route path
   }
   const handleTitleClick = () => {
-    navigate('/inicio') // Change '/new-route' to the desired route path
+    navigate('/inicio/0') // Change '/new-route' to the desired route path
   }
 
   return (

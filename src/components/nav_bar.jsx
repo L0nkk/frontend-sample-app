@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export const NavBar = () => {
+export const NavBar = ({completed}) => {
   const navLinkClass = ({ isActive }) => {
     const classes = ['nav-bar__link'];
     if (isActive) classes.push('nav-bar__link--active');
@@ -10,7 +10,7 @@ export const NavBar = () => {
 
   return (
     <nav className='nav-bar'>
-      <NavLink className={navLinkClass} to='/practica'>
+      <NavLink className={navLinkClass} to={`/practica/${completed}`}>
         <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M30 38L16 28L2 38V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2H26C27.0609 2 28.0783 2.42143 28.8284 3.17157C29.5786 3.92172 30 4.93913 30 6V38Z" 
                 stroke="#1E1E1E" 

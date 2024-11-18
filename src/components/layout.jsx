@@ -23,11 +23,11 @@ const Layout = () => {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/login' element={<HomePage />} />
-            <Route path='/inicio' element={<Inicio />} />
+            <Route path='/inicio/:completed' element={<Inicio />} />
             <Route path='/perfil' element={<Perfil />} />
-            <Route path='/practica' element={<Practica />} />
+            <Route path="/practica/:completed" element={<Practica />} />
             <Route path='/practica_industrial' element={<PracticaIndustrial />} /> {/* New route */}
-            <Route path='/practica_profesional' element={<PracticaProfesional />} /> {/* New route */}
+            <Route path="/practica_profesional/:completed" element={<PracticaProfesional />} /> {/* New route */}
             <Route path='/empresas' element={<Empresas />} />
             <Route path='/informacion' element={<Informacion />} />
             <Route path='/practica_convalidar' element={ <PracticaConvalidar/>}/> {/* New route */}
